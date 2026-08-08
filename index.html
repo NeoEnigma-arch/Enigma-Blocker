@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Enigma Blocker – Firefox Add-on</title>
+  <meta name="description" content="Enigma Blocker: local ad &amp; tracker blocker for Firefox. YouTube ads, filter lists, whitelist, element picker. No telemetry." />
+  <link rel="icon" href="assets/icon-48.png" type="image/png" />
+  <link rel="canonical" href="https://neoenigma-arch.github.io/enigma-blocker/" />
+  <style>
+    :root {
+      --bg: #070b10;
+      --panel: #0e151c;
+      --border: #1a2a22;
+      --green: #00e676;
+      --green-dim: #00c853;
+      --text: #e6edf3;
+      --muted: #8b9aab;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", system-ui, sans-serif;
+      background:
+        radial-gradient(ellipse 80% 40% at 50% -10%, rgba(0, 230, 118, 0.12), transparent 55%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.55;
+    }
+    a { color: var(--green); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 820px; margin: 0 auto; padding: 40px 20px 64px; }
+    header {
+      display: flex; gap: 18px; align-items: center;
+      margin-bottom: 28px; flex-wrap: wrap;
+    }
+    header img {
+      width: 88px; height: 88px; border-radius: 20px;
+      box-shadow: 0 0 0 1px rgba(0, 230, 118, 0.35), 0 0 28px rgba(0, 230, 118, 0.2);
+    }
+    h1 { margin: 0; font-size: 1.9rem; color: var(--green); letter-spacing: 0.03em; }
+    .tag { margin: 6px 0 0; color: var(--muted); }
+    .badge {
+      display: inline-block; margin-top: 10px;
+      font-size: 0.75rem; font-weight: 700;
+      padding: 4px 10px; border-radius: 999px;
+      background: rgba(0, 230, 118, 0.12); color: var(--green);
+    }
+    nav {
+      display: flex; flex-wrap: wrap; gap: 10px;
+      margin-bottom: 28px;
+    }
+    nav a {
+      background: var(--panel); border: 1px solid var(--border);
+      padding: 10px 14px; border-radius: 10px; color: var(--text);
+      font-weight: 600; font-size: 0.92rem;
+    }
+    nav a:hover { border-color: var(--green-dim); text-decoration: none; }
+    nav a.primary {
+      background: linear-gradient(180deg, #00e676, #00a854);
+      color: #03140c; border: none;
+    }
+    .card {
+      background: var(--panel); border: 1px solid var(--border);
+      border-radius: 14px; padding: 18px 20px; margin-bottom: 16px;
+    }
+    h2 { margin: 0 0 10px; font-size: 1.15rem; color: var(--green); }
+    h3 { margin: 16px 0 8px; font-size: 1rem; color: #b6f5d0; }
+    ul { margin: 0; padding-left: 1.2rem; color: var(--text); }
+    li { margin: 0.35rem 0; }
+    .muted { color: var(--muted); }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 12px; margin-top: 12px;
+    }
+    .feat {
+      background: #0a1016; border: 1px solid #162018;
+      border-radius: 12px; padding: 14px;
+    }
+    .feat strong { display: block; color: var(--green); margin-bottom: 4px; }
+    .feat span { font-size: 0.88rem; color: var(--muted); }
+    footer {
+      margin-top: 32px; padding-top: 16px;
+      border-top: 1px solid var(--border);
+      color: var(--muted); font-size: 0.85rem;
+    }
+    code {
+      background: #0a1016; padding: 1px 6px; border-radius: 4px;
+      color: var(--green-dim); font-size: 0.9em;
+    }
+    .lang { font-size: 0.8rem; color: var(--muted); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.08em; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <img src="assets/icon-128.png" width="128" height="128" alt="Enigma Blocker" />
+      <div>
+        <h1>Enigma Blocker</h1>
+        <p class="tag">Firefox Add-on · Ads, Tracker &amp; YouTube · lokal, ohne Telemetrie</p>
+        <span class="badge">v2.1.1</span>
+      </div>
+    </header>
+
+    <nav>
+      <a class="primary" href="https://addons.mozilla.org/firefox/addon/enigma-blocker/" id="amo-link">AMO / Install</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="#en">English</a>
+      <a href="mailto:krayzen@gmx.de">Support</a>
+    </nav>
+
+    <section class="card" id="de">
+      <p class="lang">Deutsch</p>
+      <h2>Was ist Enigma Blocker?</h2>
+      <p>
+        <strong>Enigma Blocker</strong> ist ein schlanker Werbe- und Tracker-Blocker für Firefox
+        mit dunklem Enigma-UI. Alle Filter laufen <strong>lokal</strong> auf deinem Gerät –
+        ohne Telemetrie und ohne Entwickler-Server.
+      </p>
+      <div class="grid">
+        <div class="feat"><strong>Netzwerk-Blocking</strong><span>Lokale Filterlisten (Ads, Tracker, Malware, …)</span></div>
+        <div class="feat"><strong>YouTube</strong><span>In-Player-Ads, Feed-Ads, Skip-Hilfe</span></div>
+        <div class="feat"><strong>Kosmetik</strong><span>Banner &amp; Overlays per CSS ausblenden</span></div>
+        <div class="feat"><strong>Whitelist</strong><span>Seiten vom Blocking ausnehmen</span></div>
+        <div class="feat"><strong>Element-Picker</strong><span>Störende Elemente dauerhaft ausblenden</span></div>
+        <div class="feat"><strong>Statistik</strong><span>Blockiert pro Seite / heute / gesamt</span></div>
+      </div>
+      <h3>Datenschutz</h3>
+      <p class="muted">
+        Keine Konten, keine Analytics, keine Crash-Reports an Dritte.
+        Details: <a href="privacy.html">Datenschutzerklärung / Privacy Policy</a>.
+      </p>
+      <h3>Hinweis</h3>
+      <p class="muted">
+        Manche Websites erkennen Blocker. Nutze das Add-on verantwortungsvoll und im Rahmen der Nutzungsbedingungen der jeweiligen Seiten.
+      </p>
+    </section>
+
+    <section class="card" id="en">
+      <p class="lang">English</p>
+      <h2>What is Enigma Blocker?</h2>
+      <p>
+        <strong>Enigma Blocker</strong> is a lightweight ad and tracker blocker for Firefox
+        with a dark Enigma-style UI. All filtering runs <strong>locally</strong> on your device —
+        no telemetry, no developer backend.
+      </p>
+      <ul>
+        <li>Network blocking with bundled filter lists</li>
+        <li>Cosmetic filtering</li>
+        <li>YouTube in-player / feed ad handling</li>
+        <li>Per-site whitelist, custom filters, element picker</li>
+        <li>Stats &amp; toolbar badge · import/export settings</li>
+      </ul>
+      <h3>Privacy</h3>
+      <p class="muted">
+        No accounts, no analytics, no data sent to the developer.
+        Full text: <a href="privacy.html">Privacy Policy</a>.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>AMO / Listing</h2>
+      <p class="muted">Für addons.mozilla.org eintragen:</p>
+      <ul>
+        <li><strong>Homepage:</strong> diese Seite (GitHub Pages URL)</li>
+        <li><strong>Privacy Policy:</strong> <code>…/privacy.html</code></li>
+        <li><strong>Support email:</strong> <code>krayzen@gmx.de</code></li>
+        <li><strong>Add-on ID:</strong> <code>enigma-blocker@krayzen.gmx.de</code></li>
+      </ul>
+    </section>
+
+    <footer>
+      Enigma Blocker · Author <a href="mailto:krayzen@gmx.de">krayzen@gmx.de</a> ·
+      ID <code>enigma-blocker@krayzen.gmx.de</code>
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Privacy Policy – Enigma Blocker</title>
+  <meta name="description" content="Privacy Policy for the Enigma Blocker Firefox add-on. No telemetry, local processing only." />
+  <link rel="icon" href="assets/icon-48.png" type="image/png" />
+  <style>
+    :root {
+      --bg: #070b10; --panel: #0e151c; --border: #1a2a22;
+      --green: #00e676; --text: #e6edf3; --muted: #8b9aab;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", system-ui, sans-serif;
+      background: var(--bg); color: var(--text); line-height: 1.6;
+    }
+    a { color: var(--green); }
+    .wrap { max-width: 760px; margin: 0 auto; padding: 36px 20px 64px; }
+    h1 { color: var(--green); font-size: 1.6rem; margin: 0 0 8px; }
+    h2 { color: var(--green); font-size: 1.1rem; margin: 1.6em 0 0.5em; }
+    .meta { color: var(--muted); font-size: 0.9rem; margin-bottom: 20px; }
+    .card {
+      background: var(--panel); border: 1px solid var(--border);
+      border-radius: 14px; padding: 20px 22px; margin-bottom: 16px;
+    }
+    ul { padding-left: 1.2rem; }
+    nav a {
+      display: inline-block; margin-bottom: 18px;
+      color: var(--muted); text-decoration: none;
+    }
+    nav a:hover { color: var(--green); }
+    code { background: #0a1016; padding: 1px 6px; border-radius: 4px; color: #00c853; }
+    .en-label {
+      display: inline-block; font-size: 0.75rem; font-weight: 700;
+      letter-spacing: 0.06em; text-transform: uppercase;
+      color: var(--muted); margin-bottom: 6px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <nav><a href="index.html">← Enigma Blocker</a></nav>
+    <h1>Datenschutzerklärung / Privacy Policy</h1>
+    <p class="meta">Enigma Blocker · Stand: 2026-08-08 · Version 2.1.1</p>
+
+    <section class="card">
+      <span class="en-label">Deutsch</span>
+      <h2>1. Verantwortlicher</h2>
+      <p>Betreiber der Erweiterung „Enigma Blocker“ (Firefox-Add-on):
+        <a href="mailto:krayzen@gmx.de">krayzen@gmx.de</a></p>
+
+      <h2>2. Welche Daten werden verarbeitet?</h2>
+      <p><strong>Keine.</strong> Enigma Blocker erhebt, speichert und überträgt
+        <strong>keine</strong> personenbezogenen Daten an den Entwickler oder Dritte.</p>
+      <ul>
+        <li>Keine Telemetrie, kein Analytics, keine Crash-Reports an externe Server</li>
+        <li>Keine Konten, kein Login, keine Werbung im Add-on</li>
+        <li>Filterlisten sind <strong>lokal</strong> im Add-on gebündelt</li>
+      </ul>
+
+      <h2>3. Lokale Speicherung</h2>
+      <p>Einstellungen (z. B. Whitelist, Custom-Filter, Zähler) werden ausschließlich über die
+        Browser-API <code>storage.local</code> auf dem Gerät des Nutzers abgelegt.
+        Diese Daten verlassen den Browser nicht über dieses Add-on.</p>
+
+      <h2>4. Netzwerkzugriff</h2>
+      <p>Das Add-on liest und blockiert Web-Anfragen im Browser
+        (Berechtigungen <code>webRequest</code> / <code>webRequestBlocking</code>),
+        um Werbung und Tracker zu verhindern. Dabei werden keine Request-Inhalte an den Entwickler gesendet.</p>
+
+      <h2>5. YouTube / Content-Scripts</h2>
+      <p>Auf unterstützten Seiten laufen Skripte im Browser-Tab, um Anzeigen auszublenden.
+        Verarbeitung findet nur lokal im Browser statt.</p>
+
+      <h2>6. Rechte</h2>
+      <p>Da keine personenbezogenen Daten an uns übermittelt werden, entfallen typische
+        Auskunfts-/Löschvorgänge gegenüber dem Entwickler. Lokale Daten können Sie durch
+        Deinstallieren des Add-ons oder Leeren der Add-on-Daten im Browser entfernen.</p>
+
+      <h2>7. Änderungen</h2>
+      <p>Bei relevanten Änderungen dieser Erklärung wird die Version der Erweiterung und dieses Dokuments angepasst.</p>
+    </section>
+
+    <section class="card">
+      <span class="en-label">English</span>
+      <h2>Privacy Policy (English)</h2>
+      <p><strong>Enigma Blocker does not collect, sell, or transmit personal data.</strong></p>
+      <ul>
+        <li>No telemetry, analytics, or crash reports to external servers</li>
+        <li>No accounts, no login, no ads inside the add-on</li>
+        <li>Filter lists are bundled locally with the extension</li>
+        <li>Settings and block counts are stored only via <code>storage.local</code> on your device</li>
+        <li>Network permissions are used solely to block ads/trackers in your browser</li>
+        <li>Content scripts on supported sites (e.g. YouTube) run only locally in the tab</li>
+      </ul>
+      <p>Controller / contact: <a href="mailto:krayzen@gmx.de">krayzen@gmx.de</a></p>
+      <p>To remove local data: uninstall the add-on or clear extension data in Firefox.</p>
+    </section>
+  </div>
+</body>
+</html>
